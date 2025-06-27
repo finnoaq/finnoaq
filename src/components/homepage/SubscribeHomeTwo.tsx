@@ -2,12 +2,16 @@
 
 import jsonp from 'jsonp';
 import Image from 'next/image';
+import React, { useState } from 'react';
 
 const isDev = process.env.NODE_ENV === 'development' ? true : false;
+const COMPANY_PROFILE_URL = 'https://preview--finno-aq-farmverse-tech.lovable.app/';
 
 export default function SubscribeHomeTwo() {
   const postUrl =
     'https://gmail.us15.list-manage.com/subscribe/post?u=69b7cb14141130167ae56c5f5&amp;id=ba1be9304e&amp;f_id=00f293e0f0';
+
+  const [showPopup, setShowPopup] = useState(false);
 
   function handleSubscribe(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -15,13 +19,16 @@ export default function SubscribeHomeTwo() {
     const email = e.currentTarget.EMAIL.value;
 
     jsonp(`${postUrl}&EMAIL=${email}`, { param: 'c' }, function (_, data) {
-      const { msg, result } = data;
-      // do something with response
-      alert(msg);
-      console.log(result);
+      // Optionally handle response
     });
 
+    setShowPopup(true);
     e.currentTarget.reset();
+  }
+
+  function handlePopupClose() {
+    setShowPopup(false);
+    window.open(COMPANY_PROFILE_URL, '_blank');
   }
 
   return (
@@ -57,9 +64,75 @@ export default function SubscribeHomeTwo() {
                       defaultValue={isDev ? 'someone@gmail.com' : ''}
                     />
                     <button className='cmn-btn cmn-white p900-clr round100 text-capitalize'>
-                      Subscribe
+                      Subscribe/View Company Profile
                     </button>
                   </form>
+                  {showPopup && (
+                    <div
+                      style={{
+                        position: 'fixed',
+                        top: 0,
+                        left: 0,
+                        width: '100vw',
+                        height: '100vh',
+                        background: 'rgba(0,0,0,0.35)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 9999,
+                      }}>
+                      <div
+                        style={{
+                          background: 'linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%)',
+                          padding: '2rem 1.5rem',
+                          borderRadius: '14px',
+                          textAlign: 'center',
+                          minWidth: '320px',
+                          boxShadow: '0 4px 24px 0 rgba(56, 142, 60, 0.13)',
+                          border: '1px solid #a5d6a7',
+                        }}>
+                        <div style={{ marginBottom: '1rem' }}>
+                          <svg width='40' height='40' fill='none' viewBox='0 0 24 24'>
+                            <circle cx='12' cy='12' r='12' fill='#43a047' />
+                            <path
+                              d='M7 13l3 3 7-7'
+                              stroke='#fff'
+                              strokeWidth='2'
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                            />
+                          </svg>
+                        </div>
+                        <p
+                          style={{
+                            marginBottom: '1.2rem',
+                            fontSize: '1.1rem',
+                            color: '#256029',
+                            fontWeight: 500,
+                            letterSpacing: '0.01em',
+                            lineHeight: 1.5,
+                          }}>
+                          Thank You for subscribing!<br />You will receive a mail shortly.
+                        </p>
+                        <button
+                          className='cmn-btn cmn-white p900-clr round100 text-capitalize'
+                          style={{
+                            background: 'linear-gradient(90deg, #66bb6a 0%, #a5d6a7 100%)',
+                            color: '#1b5e20',
+                            fontWeight: 600,
+                            fontSize: '1rem',
+                            padding: '0.6rem 2rem',
+                            border: 'none',
+                            borderRadius: '50px',
+                            boxShadow: '0 1px 4px rgba(56, 142, 60, 0.08)',
+                            cursor: 'pointer',
+                          }}
+                          onClick={handlePopupClose}>
+                          OK
+                        </button>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
