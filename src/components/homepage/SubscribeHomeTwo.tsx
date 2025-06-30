@@ -72,7 +72,7 @@ export default function SubscribeHomeTwo() {
                       defaultValue={isDev ? 'someone@gmail.com' : ''}
                       style={{
                         flex: 1,
-                        minWidth: 0,
+                        // minWidth: 0,
                         minWidth: '160px',
                         maxWidth: '100%',
                         marginBottom: '0.5rem',
