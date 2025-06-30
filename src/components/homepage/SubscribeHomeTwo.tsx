@@ -62,17 +62,9 @@ export default function SubscribeHomeTwo() {
                       flexWrap: 'wrap',
                       width: '100%',
                     }}>
-                    <label
-                      htmlFor="mce-EMAIL"
-                      style={{
-                        display: 'none',
-                      }}
-                    >
-                      Email address
-                    </label>
                     <input
                       type='email'
-                      placeholder='Enter your email address'
+                      placeholder='Enter your email'
                       name='EMAIL'
                       className='required email'
                       id='mce-EMAIL'
@@ -81,62 +73,65 @@ export default function SubscribeHomeTwo() {
                       style={{
                         flex: 1,
                         minWidth: 0,
-                        minWidth: '200px',
+                        minWidth: '160px',
                         maxWidth: '100%',
                         marginBottom: '0.5rem',
-                        padding: '0.85rem 1.1rem',
-                        border: '2px solid #43a047',
+                        padding: '0.75rem 1rem',
+                        border: '1.5px solid #43a047',
                         borderRadius: '30px',
-                        fontSize: '1.08rem',
+                        fontSize: '1rem',
                         outline: 'none',
-                        background: '#f9fff9',
+                        background: '#fff',
                         color: '#222',
-                        boxShadow: '0 1px 6px rgba(67, 160, 71, 0.09)',
+                        boxShadow: '0 1px 4px rgba(67, 160, 71, 0.07)',
                         transition: 'border 0.2s, box-shadow 0.2s',
                       }}
-                      aria-label="Email address for subscription"
-                      onFocus={e => (e.currentTarget.style.border = '2px solid #1b5e20')}
-                      onBlur={e => (e.currentTarget.style.border = '2px solid #43a047')}
+                      aria-label='Email address for subscription'
                     />
                     <button
-                      className='cmn-btn cmn-white p900-clr round100 text-capitalize'
+                      className='cmn-btn cmn-white p900-clr round100 text-capitalize subscribe-company-btn'
                       style={{
-                        whiteSpace: 'nowrap',
+                        whiteSpace: 'normal',
                         flexShrink: 0,
-                        minWidth: '220px',
+                        minWidth: '140px',
+                        maxWidth: '220px',
                         textAlign: 'center',
                         width: 'auto',
-                        maxWidth: '100%',
+                        padding: '0.7rem 1.2rem',
+                        fontSize: '1rem',
+                        lineHeight: 1.2,
+                        wordBreak: 'break-word',
                       }}>
-                      Subscribe/View Company Profile
+                      Subscribe/<wbr />View Company Profile
                     </button>
                     <style>{`
                       @media (max-width: 576px) {
                         .subscribe-form02 {
                           flex-direction: column !important;
                           align-items: stretch !important;
+                          gap: 0.5rem !important;
                         }
-                        .subscribe-form02 input,
-                        .subscribe-form02 button {
+                        .subscribe-form02 input {
                           width: 100% !important;
                           min-width: 0 !important;
                           margin-bottom: 0.5rem;
+                          font-size: 1rem;
+                          padding: 0.7rem 1rem;
                         }
-                        .subscribe-form02 button {
+                        .subscribe-company-btn {
+                          width: 100% !important;
                           min-width: 0 !important;
+                          max-width: 100% !important;
+                          font-size: 1rem !important;
+                          padding: 0.7rem 1rem !important;
+                          white-space: normal !important;
                         }
                       }
                       .subscribe-form02 input::placeholder {
                         color: #43a047;
                         opacity: 1;
-                        font-weight: 600;
+                        font-weight: 500;
                         letter-spacing: 0.01em;
-                        font-size: 1.08rem;
-                      }
-                      .subscribe-form02 input:focus {
-                        background: #fff;
-                        border: 2px solid #1b5e20;
-                        box-shadow: 0 2px 8px rgba(67,160,71,0.13);
                       }
                     `}</style>
                   </form>
