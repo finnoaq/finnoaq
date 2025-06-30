@@ -65,6 +65,7 @@ export default function SubscribeHomeTwo() {
                     <input
                       type='email'
                       placeholder='Enter your email'
+                      //user is supposed to enter their email here
                       name='EMAIL'
                       className='required email'
                       id='mce-EMAIL'
