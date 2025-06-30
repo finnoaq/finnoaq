@@ -65,7 +65,6 @@ export default function SubscribeHomeTwo() {
                     <input
                       type='email'
                       placeholder='Enter your email'
-                      //user is supposed to enter their email here
                       name='EMAIL'
                       className='required email'
                       id='mce-EMAIL'
@@ -73,7 +72,6 @@ export default function SubscribeHomeTwo() {
                       defaultValue={isDev ? 'someone@gmail.com' : ''}
                       style={{
                         flex: 1,
-                        // minWidth: 0,
                         minWidth: '160px',
                         maxWidth: '100%',
                         marginBottom: '0.5rem',
@@ -86,6 +84,8 @@ export default function SubscribeHomeTwo() {
                         color: '#222',
                         boxShadow: '0 1px 4px rgba(67, 160, 71, 0.07)',
                         transition: 'border 0.2s, box-shadow 0.2s',
+                        // Ensure placeholder is always visible and not cut off
+                        width: '100%',
                       }}
                       aria-label='Email address for subscription'
                     />
@@ -129,10 +129,14 @@ export default function SubscribeHomeTwo() {
                         }
                       }
                       .subscribe-form02 input::placeholder {
-                        color: #43a047;
-                        opacity: 1;
-                        font-weight: 500;
-                        letter-spacing: 0.01em;
+                        color: #43a047 !important;
+                        opacity: 1 !important;
+                        font-weight: 500 !important;
+                        letter-spacing: 0.01em !important;
+                        font-size: 1rem !important;
+                        white-space: normal !important;
+                        text-overflow: ellipsis !important;
+                        overflow: visible !important;
                       }
                     `}</style>
                   </form>
