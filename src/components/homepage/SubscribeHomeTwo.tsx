@@ -62,8 +62,8 @@ export default function SubscribeHomeTwo() {
                       flexWrap: 'wrap',
                     }}>
                     <input
-                      type='text'
-                      placeholder='Enter Your Email'
+                      type='email'
+                      placeholder='Enter your email address'
                       name='EMAIL'
                       className='required email'
                       id='mce-EMAIL'
@@ -75,7 +75,16 @@ export default function SubscribeHomeTwo() {
                         minWidth: '180px',
                         maxWidth: '100%',
                         marginBottom: '0.5rem',
+                        padding: '0.75rem 1rem',
+                        border: '1.5px solid #43a047',
+                        borderRadius: '30px',
+                        fontSize: '1rem',
+                        outline: 'none',
+                        background: '#fff',
+                        color: '#222',
+                        boxShadow: '0 1px 4px rgba(67, 160, 71, 0.07)',
                       }}
+                      aria-label="Email address for subscription"
                     />
                     <button
                       className='cmn-btn cmn-white p900-clr round100 text-capitalize'
@@ -104,6 +113,12 @@ export default function SubscribeHomeTwo() {
                         .subscribe-form02 button {
                           min-width: 0 !important;
                         }
+                      }
+                      .subscribe-form02 input::placeholder {
+                        color: #43a047;
+                        opacity: 1;
+                        font-weight: 500;
+                        letter-spacing: 0.01em;
                       }
                     `}</style>
                   </form>
