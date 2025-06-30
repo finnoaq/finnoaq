@@ -59,6 +59,7 @@ export default function SubscribeHomeTwo() {
                       gap: '0.5rem',
                       alignItems: 'center',
                       justifyContent: 'flex-start',
+                      flexWrap: 'wrap',
                     }}>
                     <input
                       type='text'
@@ -68,7 +69,13 @@ export default function SubscribeHomeTwo() {
                       id='mce-EMAIL'
                       required
                       defaultValue={isDev ? 'someone@gmail.com' : ''}
-                      style={{ flex: 1, minWidth: 0 }}
+                      style={{
+                        flex: 1,
+                        minWidth: 0,
+                        minWidth: '180px',
+                        maxWidth: '100%',
+                        marginBottom: '0.5rem',
+                      }}
                     />
                     <button
                       className='cmn-btn cmn-white p900-clr round100 text-capitalize'
@@ -77,9 +84,28 @@ export default function SubscribeHomeTwo() {
                         flexShrink: 0,
                         minWidth: '220px',
                         textAlign: 'center',
+                        width: 'auto',
+                        maxWidth: '100%',
                       }}>
                       Subscribe/View Company Profile
                     </button>
+                    <style>{`
+                      @media (max-width: 576px) {
+                        .subscribe-form02 {
+                          flex-direction: column !important;
+                          align-items: stretch !important;
+                        }
+                        .subscribe-form02 input,
+                        .subscribe-form02 button {
+                          width: 100% !important;
+                          min-width: 0 !important;
+                          margin-bottom: 0.5rem;
+                        }
+                        .subscribe-form02 button {
+                          min-width: 0 !important;
+                        }
+                      }
+                    `}</style>
                   </form>
                   {showPopup && (
                     <div
