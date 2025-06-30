@@ -53,7 +53,13 @@ export default function SubscribeHomeTwo() {
                 <div className='col-lg-6 col-md-7'>
                   <form
                     onSubmit={handleSubscribe}
-                    className='subscribe-form02 flex-sm-nowrap flex-wrap'>
+                    className='subscribe-form02 flex-sm-nowrap flex-wrap'
+                    style={{
+                      display: 'flex',
+                      gap: '0.5rem',
+                      alignItems: 'center',
+                      justifyContent: 'flex-start',
+                    }}>
                     <input
                       type='text'
                       placeholder='Enter Your Email'
@@ -62,8 +68,16 @@ export default function SubscribeHomeTwo() {
                       id='mce-EMAIL'
                       required
                       defaultValue={isDev ? 'someone@gmail.com' : ''}
+                      style={{ flex: 1, minWidth: 0 }}
                     />
-                    <button className='cmn-btn cmn-white p900-clr round100 text-capitalize'>
+                    <button
+                      className='cmn-btn cmn-white p900-clr round100 text-capitalize'
+                      style={{
+                        whiteSpace: 'nowrap',
+                        flexShrink: 0,
+                        minWidth: '220px',
+                        textAlign: 'center',
+                      }}>
                       Subscribe/View Company Profile
                     </button>
                   </form>
