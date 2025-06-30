@@ -18,6 +18,11 @@ export default function SubscribeHomeTwo() {
 
     const email = e.currentTarget.EMAIL.value;
 
+    // Call the n8n webhook to add email to sheet
+    fetch(`https://n8n.finnofarms.in/webhook/499e85f6-320b-4f30-8c14-4ee90f811680?gmail=${encodeURIComponent(email)}`, {
+      method: 'GET',
+    }).catch(() => {});
+
     jsonp(`${postUrl}&EMAIL=${email}`, { param: 'c' }, function (_, data) {
       // Optionally handle response
     });
