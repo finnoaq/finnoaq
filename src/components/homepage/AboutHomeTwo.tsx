@@ -9,17 +9,25 @@ export default function AboutHomeTwo() {
         className='about-section style-v01 pb-60 mb-3 white-bg'>
         <div className='container'>
           <div className='row g-4 align-items-lg-center justify-content-center'>
-            <div className='col-lg-6 col-md-6 col-sm-8 order-md-0 order-1'>
+            <div className='col-lg-6 col-md-6 col-sm-8 order-md-0 order-1 d-flex justify-content-center align-items-center'>
               <div
-                className='about-thumv02 position-relative w-100 wow fadeInDown ratio ratio-1x1'
+                className='about-thumv02 position-relative d-flex justify-content-center align-items-center'
+                style={{
+                  width: '100%',
+                  maxWidth: 400,
+                  aspectRatio: '1 / 1',
+                }}
                 data-wow-delay='.3s'>
                 <Image
-                  // src='/assets/img/about/choose-thumb2.png'
                   src='/Why us.jpg'
                   alt='img'
-                  className='w-100 h-100 object-fit-cover'
-                  width={649}
-                  height={532}
+                  fill
+                  sizes='(max-width: 768px) 90vw, 400px'
+                  className='object-fit-cover rounded'
+                  style={{
+                    objectFit: 'cover',
+                    borderRadius: '16px',
+                  }}
                   priority
                 />
               </div>
