@@ -184,7 +184,7 @@ export default function WorkProcessHomeTwo() {
             <Link
               href='https://forms.gle/JNjoKb5ejRL25qjc9'
               target='_blank'
-              className='cmn-btn round100 cmn-primary2 text-white'
+              className='cmn-btn round100 cmn-primary text-white'
               rel='noopener noreferrer'>
               Click here to start
               {/* <svg

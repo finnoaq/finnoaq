@@ -31,7 +31,18 @@ export default function HeaderOne({ style_2 }: PropsType) {
               <div className='header-left'>
                 <div className='logo'>
                   <Link href='/' className='header-logo'>
-                    <img src='assets/img/logo/logo.png' alt='logo-img' />
+                    <img
+                      src='assets/img/logo/logo.png'
+                      alt='logo-img'
+                      className='img-fluid'
+                      style={{
+                        maxWidth: '220px',
+                        width: '100%',
+                        height: 'auto',
+                        display: 'block',
+                        objectFit: 'contain'
+                      }}
+                    />
                   </Link>
                 </div>
               </div>
