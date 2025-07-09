@@ -5,7 +5,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 const isDev = process.env.NODE_ENV === 'development' ? true : false;
-const COMPANY_PROFILE_URL = 'https://preview--finno-aq-farmverse-tech.lovable.app/';
+const COMPANY_PROFILE_URL = 'https://preview--finnoaq-farmverse-profile.lovable.app/';
 
 export default function SubscribeHomeTwo() {
   const postUrl =
