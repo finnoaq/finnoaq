@@ -198,17 +198,34 @@ export default function ContactHomeTwo() {
           </div>
           <div className='col-md-6'>
             <div
-              className='taklking-cotnact-thumb w-100 wow fadeInRight'
-              data-wow-delay='.4s'>
-              <Image
-                // src='/assets/img/contact/talking-contact.png'
-                src='/Contact us.jpg'
-                alt='img'
-                className='w-100 h-100 object-fit-cover'
-                // width={710}
-                width={1200}
-                height={968}
-              />
+              className='taklking-cotnact-thumb w-100 wow fadeInRight position-relative d-flex justify-content-center align-items-center'
+              data-wow-delay='.4s'
+              style={{ minHeight: '400px' }}
+            >
+                <div
+                  style={{
+                    width: '400px',
+                    height: '400px',
+                    position: 'relative',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    margin: '80px auto 0 auto', // Increased top margin for more space
+                  }}
+                >
+                  <Image
+                    src='/Contact us.jpg'
+                    alt='img'
+                    fill
+                    sizes='(max-width: 768px) 90vw, 400px'
+                    className='object-fit-contain rounded'
+                    style={{
+                      objectFit: 'contain',
+                      borderRadius: '16px',
+                    }}
+                    priority
+                  />
+                </div>
             </div>
           </div>
         </div>
