@@ -21,7 +21,7 @@ interface CountDataType {
 }
 
 const coundet_data: CountDataType[] = [
-  { id: 1, number: 1000, icon: countImage1, text: '+', title: 'Farmers' },
+  { id: 1, number: 10000, icon: countImage1, text: '+', title: 'Farmers' },
   {
     id: 2,
     number: 5,
@@ -65,7 +65,7 @@ export default function CounterHomeOne({ style_2 }: PropsType) {
                 {style_2 ? (
                   <>
                     <div className='cont-bottom'>
-                      <Image src={item.icon} alt='img' />
+                      <Image src={item.icon} alt='img' width={64} height={64} style={{ objectFit: 'contain', display: 'block', margin: '0 auto' }} />
                     </div>
                     <div className='con-box'>
                       <h2 className='d-flex align-items-center'>
@@ -88,7 +88,7 @@ export default function CounterHomeOne({ style_2 }: PropsType) {
                       {item.text}
                     </h2>
                     <div className='cont-bottom'>
-                      <Image src={item.icon} alt='img' />
+                      <Image src={item.icon} alt='img' width={64} height={64} style={{ objectFit: 'contain', display: 'block', margin: '0 auto' }} />
                       <p>{item.title}</p>
                     </div>
                   </>
