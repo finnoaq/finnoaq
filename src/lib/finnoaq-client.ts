@@ -1,4 +1,4 @@
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'https://194.238.16.37:4000/api/v1';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://194.238.16.37:4000/api/v1';
 
 export interface UserInfo {
   name: string;
