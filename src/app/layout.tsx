@@ -1,5 +1,6 @@
 import { GoogleAnalytics } from '@next/third-parties/google';
 import '../styles/index.scss';
+import ChatWidget from '../components/chat/ChatWidget';
 
 export default function RootLayout({
   children,
@@ -16,6 +17,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <ChatWidget />
         <GoogleAnalytics gaId='G-EHMG8WWQ7G' />
       </body>
     </html>
