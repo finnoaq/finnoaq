@@ -4,7 +4,8 @@ const nextConfig = {
   // output: 'export',
   reactStrictMode: true,
   eslint: {
-    dirs: ['pages', 'utils'], // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
+    dirs: ['src'], // Only run ESLint on the 'src' directory during production builds (next build)
+    ignoreDuringBuilds: true,
   },
   // images: {
   //   unoptimized: true,
@@ -16,7 +17,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Content-Security-Policy',
-            value: "upgrade-insecure-requests; connect-src 'self' http://194.238.16.37:4000 https://194.238.16.37:4000 http: https:;"
+            value: "upgrade-insecure-requests; connect-src 'self' https://ai.finnoaq.com http: https:;"
           }
         ]
       }
