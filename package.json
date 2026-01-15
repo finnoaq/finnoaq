@@ -40,6 +40,7 @@
     "@types/bootstrap": "^5.2.10",
     "@types/jsonp": "^0.2.3",
     "@types/node": "^20",
+    "@types/pg": "^8.16.0",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@types/react-modal-video": "^1.2.3",
